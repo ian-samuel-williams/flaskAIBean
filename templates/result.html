@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <title> Password Checker </title>
+
+    <!-- bootstrap for styling , Pyscript can also be used for styling instead of bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <style>
+
+    html {
+      align-items: center;
+      padding-left:13%;
+      padding-right:13%;
+      background-color: rgb(116,59,67);
+    }
+    body {
+        background-color: #fcfcfc;
+        padding-top: 55px;
+        min-height: 100vh;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        font-size:calc(6.5px + .77vw);
+      }
+      img {
+        height: auto;
+        width: auto;
+      }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container" >
+
+        <h1 class="text-center">
+            Password Strength Checker
+        </h1>
+        <br />
+        <p><h3>Enter your "super strong" password:</h3>
+           <form class="form-horizontal" action = "/result" method="post">
+        <input id="password" name = "password" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Password Here" /></p>
+        <center>
+            <button id="check" type="submit"  class="btn btn-dark">Check</button>
+
+        </center>
+</form>
+
+        <h4>Result:</h4>
+        {{ result }}
+
+        <center>
+          <img src="static/Eastern.png" alt="Eastern Logo">
+        </center>
+    </div>
+
+    </body>
+    </html>
